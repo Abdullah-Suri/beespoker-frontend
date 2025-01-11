@@ -46,9 +46,9 @@
 <body>
     <!-- Header -->
     <header class="container flex items-center justify-between py-5">
-        <div>
+        <a href="/">
             <img src="/assets/logo.svg" alt="Logo">
-        </div>
+        </a>
         <div class="hidden text-center md:flex items-center text-white font-bold gap-[20px]">
             <a href="#" class="text-primary py-4 px-12 rounded-[20px]">Contact</a>
             <a href="#" class="bg-accent text-primary py-4 px-12 rounded-[20px]">How it works</a>
@@ -109,7 +109,6 @@
         </div>
     </section>
 
-
     <!-- Logo -->
     <section class="">
         <div class="my-14 h-px w-[90%] bg-[#D8D8D8] mx-auto"></div>
@@ -159,7 +158,6 @@
         <div class="my-14 h-px w-[90%] bg-[#D8D8D8] mx-auto"></div>
     </section>
 
-
     <!-- Explore Story -->
     <section class="container flex items-center justify-center lg:flex-nowrap flex-wrap py-24">
         <div class="lg:w-1/2 lg:text-left text-center">
@@ -188,9 +186,9 @@
         <div class="w-full px-4">
             <div class="swiper">
               <!-- Swiper Wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide bg-white border border-[#E5F4F2] rounded-lg p-6 shadow-[34.85px_29.63px_48.34px_0px_#3366FF0D]">
+              <div class="swiper-wrapper items-stretch">
+                <!-- Slide 1  shadow-[34.85px_29.63px_48.34px_0px_#3366FF0D]-->
+                <div class="min-h-full h-full swiper-slide bg-white border border-[#E5F4F2] rounded-lg p-6">
                     <img src="/assets/sarahk.png" class="rounded-full mx-auto" alt="">
                     <h4 class="text-2xl font-semibold poppins pt-4 pb-1.5">Sarah K.</h4>
                     <p class="text-sm">UX Designer @Brello</p>
@@ -214,8 +212,8 @@
                     </div>
                 </div>
         
-                <!-- Slide 2 -->
-                <div class="swiper-slide bg-white border border-[#E5F4F2] rounded-lg p-6 shadow-[34.85px_29.63px_48.34px_0px_#3366FF0D]">
+                <!-- Slide 2  shadow-[34.85px_29.63px_48.34px_0px_#3366FF0D]-->
+                <div class="min-h-full h-full swiper-slide bg-white border border-[#E5F4F2] rounded-lg p-6">
                     <img src="/assets/micheal.png" class="rounded-full mx-auto" alt="">
                     <h4 class="text-2xl font-semibold poppins pt-4 pb-1.5">Michael L.</h4>
                     <p class="text-sm">Creative Director @Yo</p>
@@ -239,8 +237,8 @@
                     </div>
                 </div>
         
-                <!-- Slide 3 -->
-                <div class="swiper-slide bg-white border border-[#E5F4F2] rounded-lg p-6 shadow-[34.85px_29.63px_48.34px_0px_#3366FF0D]">
+                <!-- Slide 3  shadow-[34.85px_29.63px_48.34px_0px_#3366FF0D]-->
+                <div class="min-h-full h-full swiper-slide bg-white border border-[#E5F4F2] rounded-lg p-6">
                     <img src="/assets/sarahk.png" class="rounded-full mx-auto" alt="">
                     <h4 class="text-2xl font-semibold poppins pt-4 pb-1.5">Lauren M.</h4>
                     <p class="text-sm">UI Designer @Boo</p>
@@ -264,8 +262,8 @@
                     </div>
                 </div>
                 
-                <!-- Slide 4 -->
-                <div class="swiper-slide bg-white border border-[#E5F4F2] rounded-lg p-6 shadow-[34.85px_29.63px_48.34px_0px_#3366FF0D]">
+                <!-- Slide 4  shadow-[34.85px_29.63px_48.34px_0px_#3366FF0D]-->
+                <div class="min-h-full h-full swiper-slide bg-white border border-[#E5F4F2] rounded-lg p-6">
                     <img src="/assets/sarahk.png" class="rounded-full mx-auto" alt="">
                     <h4 class="text-2xl font-semibold poppins pt-4 pb-1.5">Sarah K.</h4>
                     <p class="text-sm">UX Designer @Brello</p>
@@ -420,8 +418,8 @@
     </section>
 
     <!-- Contact -->
-    <section class="container sm:p-16 max-sm:pb-16">
-        <div class="py-14">
+    <section class="container bg-white border border-[#E5F4F2] rounded-[20px] sm:p-16 max-sm:pb-16 mb-16">
+        <div class="pb-14">
             <h5 class="text-[38px] leading-[1.2em] font-bold poppins pb-2.5">Let’s get in touch!</h5>
             <p>Got questions about the Landing Page UI Kit? Our team is here to help. Contact us for quick and friendly support.</p>
         </div>
@@ -471,7 +469,7 @@
                 <div class="w-full max-w-[400px] ">
                     <div class="relative flex items-center">
                         <input type='text' placeholder='Full Name'
-                            class="pr-4 pl-14 py-3 text-sm text-black bg-white border border-gray-400 outline-none placeholder:text-secondary w-full rounded-[20px]" />
+                            class="pr-4 pl-14 py-[18px] text-sm text-black bg-white border border-[#D8D8D8] outline-none placeholder:text-secondary w-full rounded-[20px]" />
                 
                         <div class="absolute left-4">
                             <svg width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -487,7 +485,7 @@
                 <div class="w-full max-w-[400px] my-2.5">
                     <div class="relative flex items-center">
                         <input type='text' placeholder='Email'
-                            class="pr-4 pl-14 py-3 text-sm text-black bg-white border border-gray-400 outline-none placeholder:text-secondary w-full rounded-[20px]" />
+                            class="pr-4 pl-14 py-[18px] text-sm text-black bg-white border border-[#D8D8D8] outline-none placeholder:text-secondary w-full rounded-[20px]" />
                 
                         <div class="absolute left-4">
                             <svg width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg">

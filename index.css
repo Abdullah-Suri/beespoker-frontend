@@ -1,57 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --primary: #009379;
-    --secondary: #2D2D2D;
-    --accent: #E5F4F2;
-    --bgColor: #F8F9FF;
+  --primary: #009379;
+  --secondary: #2D2D2D;
+  --accent: #E5F4F2;
+  --bgColor: #F8F9FF;
 }
 
-body, html {
-    font-family: 'Mulish', sans-serif !important;
-    background-color: var(--bgColor);
-    color: var(--secondary);
+body,
+html {
+  font-family: 'Mulish', sans-serif !important;
+  background-color: var(--bgColor);
+  color: var(--secondary);
 }
 
 .poppins {
-    font-family: 'Poppins', sans;
-    font-weight: 700;
+  font-family: 'Poppins', sans;
+  font-weight: 700;
 }
 
 @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-250px * 7));
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  .slider {
-    height: 100px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    width: auto;
+
+  100% {
+    transform: translateX(calc(-250px * 7));
   }
-  
-  .slider .slide-track {
-    animation: scroll 40s linear infinite;
-    display: flex;
-    width: calc(250px * 14);
-  }
-  
-  .slider .slide {
-    height: 100px;
-    width: 250px;
-  }
-  
-  .top-menu {
-    transition: transform 0.3s ease-in-out;
-  }
-  .top-menu.invisible {
-    transform: translateY(-100%);
-  }
-  .top-menu.visible {
-    transform: translateY(0);
-  }
+}
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+.top-menu {
+  transition: transform 0.3s ease-in-out;
+}
+
+.top-menu.invisible {
+  transform: translateY(-100%);
+}
+
+.top-menu.visible {
+  transform: translateY(0);
+}
+
+.swiper-3d {
+  perspective: 1900px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 35px;
+  height: 35px;
+  border: 1px solid;
+  border-radius: 50px;
+  color: var(--secondary);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 12px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: #4CAF50; /* Green for 'on' state */
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(26px); /* Move the slider to the right */
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Light gray for 'off' state */
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
