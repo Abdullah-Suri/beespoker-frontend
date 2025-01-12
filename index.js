@@ -1,3 +1,4 @@
+// Testimonial Slider
 const swiper = new Swiper('.swiper', {
   // slidesPerView: 3,
   spaceBetween: 20,
@@ -11,32 +12,30 @@ const swiper = new Swiper('.swiper', {
   },
   loop: true,
   breakpoints: {
-    // When the viewport width is >= 640px
     768: {
-      slidesPerView: 2, // Show 2 slides
-      spaceBetween: 30, // Increase space between slides
+      slidesPerView: 2,
+      spaceBetween: 30,
     },
-    // When the viewport width is >= 1024px
     1024: {
-      slidesPerView: 3, // Show 3 slides
-      spaceBetween: 40, // Increase space between slides
+      slidesPerView: 3,
+      spaceBetween: 40,
     },
   },
 });
 
+// 3d Card slider 
 const CardSwiper = new Swiper('.card-swiper', {
-  effect: 'coverflow', // Use the coverflow effect
+  effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 'auto', // Automatically adjust based on card width
-  // loop: true, // Enable infinite looping
-  loopAdditionalSlides: 3, // Adds extra slides to prevent blank areas in the loop
+  slidesPerView: 'auto',
+  loopAdditionalSlides: 3,
   coverflowEffect: {
-    rotate: 0, // No rotation
-    stretch: 20, // Adjust spacing between slides
-    depth: 140, // Creates the 3D depth effect
-    modifier: 2.5, // Multiplies the 3D effect
-    slideShadows: false, // Disable shadows for a cleaner look
+    rotate: 0,
+    stretch: 20,
+    depth: 140,
+    modifier: 2.5,
+    slideShadows: false,
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -45,6 +44,27 @@ const CardSwiper = new Swiper('.card-swiper', {
   initialSlide: 3
 });
 
+// Book preview slider
+const cardPreviewSwiper = new Swiper('.card-preview-swiper', {
+  spaceBetween: 0,
+  autoplay: {
+    delay: 5000,
+    // disableOnInteraction: false,
+  },
+  loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 100,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 10,
+      spaceBetween: 40,
+    },
+  },
+});
+
+// Header Mobile Menu
 const menuToggle = document.getElementById("menuToggle");
 const closeMenu = document.getElementById("closeMenu");
 const topMenu = document.getElementById("topMenu");
@@ -60,22 +80,21 @@ menuToggle.addEventListener("click", () => {
   }
 });
 
-// Close Menu on Close Button
+// Close Menu
 closeMenu.addEventListener("click", () => {
   topMenu.classList.remove("visible");
   topMenu.classList.add("invisible");
 });
 
 
+// Tab Switcher - Book Customization
 const toggleLabel = document.getElementById('toggle-label');
 const toggleCheckbox = document.getElementById('toggle-checkbox');
 const monthlyBtn = document.getElementById('monthly-btn');
 const yearlyBtn = document.getElementById('yearly-btn');
 
-// Initial state
 let isYearly = false;
 
-// Function to update the toggle label and button styles based on the state
 function updateToggle() {
   if (isYearly) {
     toggleLabel.textContent = 'Yearly';
@@ -86,7 +105,6 @@ function updateToggle() {
   }
 }
 
-// Event listeners for the buttons
 monthlyBtn.addEventListener('click', function () {
   isYearly = false;
   toggleCheckbox.checked = false;
@@ -99,5 +117,4 @@ yearlyBtn.addEventListener('click', function () {
   updateToggle();
 });
 
-// Initial setup
 updateToggle();

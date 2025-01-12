@@ -77,3 +77,7 @@ html {
 .swiper-button-prev:after {
   font-size: 12px;
 }
+
+.card-preview-swiper .swiper-slide {
+  margin-right: 15px !important;
+}
